@@ -34,21 +34,6 @@ app.get("/api/:date?", function (req, res) {
     return res.json({ error : "Invalid Date" });
   }
 
-  // if (!req.params.date) {
-  //   return res.json({
-  //     unix: dateInstance.getTime(),
-  //     utc: dateInstance.get
-  //   });
-  // }
-
-  console.log(dateValue)
-  console.log(typeof dateValue)
-  console.log('isDateValid:', dateUtils.isDateValid(dateValue))
-  console.log('Date Instance:', new Date(dateValue));
-
-
-
-
   const dateInstance = new Date(dateValue);
 
   res.json({
